@@ -1,52 +1,56 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 /* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap'); */
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     /* width: 100%; */
     /* background-color: transparent; */
-    
+
 }
 
 /*------------Navbar--------------------*/
-.main-container{
-    background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url('/images/background1.jpeg');
+.main-container {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/images/background1.jpeg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
 }
-.navbar{
+
+.navbar {
     background-color: transparent;
     font-family: "Montserrat", sans-serif !important;
     border-bottom: 0.3px solid grey;
     margin-bottom: 250px;
 }
-.navbar-brand, .nav-link{
+
+.navbar-brand,
+.nav-link {
     color: white !important;
 }
 
-.nav-link{
+.nav-link {
     margin-left: 20px !important;
     margin-right: 20px !important;
 }
 
-.navbar-brand{
+.navbar-brand {
     border-right: 1px solid grey;
     padding-right: 50px;
     font-weight: 100 !important;
 }
 
 /*------------------showcase----------------------*/
-.showcase-section{
+.showcase-section {
     text-align: center;
 }
 
-.explore-button{
+.explore-button {
     color: black !important;
     font-weight: bolder;
     padding: 15px 80px !important;
@@ -58,33 +62,78 @@ body{
     font-weight: 400 !important;
 }
 
-.explore-button:hover{
-    background-color:burlywood !important;
+.explore-button:hover {
+    background-color: burlywood !important;
     color: white !important;
 }
 
 
 /*------------------about----------------------*/
-.about-section{
+.about-section {
     height: 100vh;
     text-align: justify;
     padding-top: 40px;
     font-family: "Montserrat", sans-serif !important;
 }
 
-.about{
-    display: flex;
-    justify-content: space-around;
+.about {
+
+    /* justify-content: space-around; */
+    /* flex-wrap: wrap !important; */
 }
 
-.about-image{
+.about-image {
     height: 550px;
-    width: 550px;
-    margin-right: 50px;
-    padding-left: 50px;
+    width: 450px;
 }
 
-.about-content{
-    padding-right: 100px;
+
+
+/* Media Queries */
+/* PC SCREEN */
+@media screen and (min-width: 1024px) {
+    .about {
+        display: flex;
+        flex-direction: row !important;
+    }
+
+    .about-image {
+        margin: 0 30px 0px 20px;
+    }
+
+    .about-content {
+        padding-right: 100px;
+    }
 }
 
+/* Tablet Screen */
+@media (min-width: 769px) and (max-width: 1023px) {
+    .about {
+        display: flex;
+        flex-direction: row !important;
+    }
+
+    .about-image {
+        margin: 0 30px 0px 20px;
+    }
+
+    .about-content {
+        padding-right: 100px;
+    }
+}
+
+/* Mobile Screen */
+@media screen and (max-width: 768px) {
+    .about {
+        display: block;
+
+    }
+
+    .about-image {
+        margin: 0 10px 10px 10px;
+    }
+
+    .about-content {
+        margin: 0 20px 0px 14px;
+    }
+}
